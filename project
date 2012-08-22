@@ -1,0 +1,6 @@
+#!/bin/bash
+
+USER=harchibald
+
+cd /home/$1
+su $USER -c "sudo su $1"
