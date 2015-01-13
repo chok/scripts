@@ -11,5 +11,5 @@ BIN_PATH="/usr/bin"
 FILE="${URL}/${NAME}"
 BIN_FILE="${BIN_PATH}/${NAME}"
 
-curl -o "${BIN_FILE}" "${URL}"
+curl -o "${BIN_FILE}" "${FILE}"
 chmod 755 "${BIN_FILE}"
