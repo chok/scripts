@@ -1,4 +1,10 @@
 #/usr/bin/env sh
+if [ -z $NAME ]
+then
+    echo "You must provide NAME"
+    exit -1
+fi
+
 URL="https://raw.githubusercontent.com/chok/scripts/master"
 BIN_PATH="/usr/bin"
 
