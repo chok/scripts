@@ -30,13 +30,14 @@ BACKUP_PATH=$3
 SQL_FILE="$DB-`date +%Y%m%d`.sql"
 
 echo "Go to ${BACKUP_PATH}"
-cd ${BACKUP_PATH}
+mkdir -p "${BACKUP_PATH}"
+cd "${BACKUP_PATH}"
 
 echo "Dump ${DB}..."
 mysqldump -u${USER} -p${PASSWORD} -r${SQL_FILE} ${DB}
 
 echo "Compress ${SQL_FILE}..."
-bzip2 ${SQL_FILE}
+bzip2 "${SQL_FILE}"
 
 echo "...Done"
 
