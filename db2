@@ -27,7 +27,7 @@ fi
 USER=$1
 DB=$2
 BACKUP_PATH=$3
-SQL_FILE="$DB-`date +%Y%m%d`.sql"
+SQL_FILE="$DB-`hostname`-`date +%Y%m%d`.sql"
 
 echo "Go to ${BACKUP_PATH}"
 mkdir -p "${BACKUP_PATH}"
